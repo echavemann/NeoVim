@@ -14,10 +14,10 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " " -- make sure to set `mapleader` before lazy so your mappings are correct
 
 require("lazy").setup("echavemann", {
-  defaults = { lazy = true, version = "c433ea7aa842c446edc2b1570998bf5440c68188" },
+  defaults = { lazy = false, version = false },
   ui = { wrap = "true" },
   change_detection = { enabled = true },
-  debug = false,
+  checker = {enabled = true},
   performance = {
     rtp = {
       disabled_plugins = {
