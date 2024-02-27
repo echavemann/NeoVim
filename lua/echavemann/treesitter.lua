@@ -13,7 +13,7 @@ function M.config()
   local configs = require "nvim-treesitter.configs"
 
   configs.setup {
-    ensure_installed = { "lua", "markdown", "markdown_inline", "bash", "python", "cpp", "cmake", "vim", "regex", "bash" },
+    ensure_installed = { "lua", "markdown", "markdown_inline", "bash", "python", "cpp", "cmake", "vim", "regex", "bash", "go", "rust" },
     ignore_install = { "" },                                                       
     sync_install = false,                                                         
 
