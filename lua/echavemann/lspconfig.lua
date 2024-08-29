@@ -25,7 +25,10 @@ M.config = function()
 
 	local servers = {
 		"pylsp",
-        "clangd"
+        "clangd",
+        "ruff_lsp",
+        "bashls",
+        "cmake"
 	}
 
 	-- setup servers
