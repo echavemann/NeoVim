@@ -20,15 +20,11 @@ M.config = function()
 		vim.keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts)
 		vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, bufopts)
 		vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
-		vim.keymap.set("n", "<space>f", function()
-			vim.lsp.buf.format({ async = true })
-		end, bufopts)
 		vim.keymap.set("n", "<space>df", vim.diagnostic.goto_next, bufopts)
 	end
 
 	local servers = {
-		"lua_ls",
-		"pyright",
+		"pylsp",
         "clangd"
 	}
 
@@ -41,7 +37,6 @@ M.config = function()
 				Lua = {
 					diagnostics = {
 						globals = { "vim", "LUASNIP_ENV" },
-						-- LUASNIP_ENV is a custom variable declared in `lua/plugins/luasnip.lua`
 					},
 				},
 				gopls = gopls_settings,

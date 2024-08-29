@@ -4,21 +4,12 @@ local M = {
     cmd = "Neotree",
     keys = {
         {
-            "<leader>fe",
-            function()
-                require("neo-tree.command").execute({ toggle = true, dir = Util.root() })
-            end,
-            desc = "Explorer NeoTree (root dir)",
-        },
-        {
-            "<leader>fE",
+            "<leader>e",
             function()
                 require("neo-tree.command").execute({ toggle = true, dir = vim.loop.cwd() })
             end,
-            desc = "Explorer NeoTree (cwd)",
+            desc = "Explorer NeoTree",
         },
-        { "<leader>e", "<leader>fe", desc = "Explorer NeoTree (root dir)", remap = true },
-        { "<leader>E", "<leader>fE", desc = "Explorer NeoTree (cwd)", remap = true },
         {
             "<leader>ge",
             function()

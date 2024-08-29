@@ -12,7 +12,7 @@ local M = {
 function M.config()
   require("mason").setup(settings)
   require("mason-lspconfig").setup {
-    ensure_installed = {"cmake","dockerls","clangd","jsonls","pylsp","bashls"},
+    ensure_installed = {"cmake","dockerls","clangd","jsonls","pylsp","bashls", "ruff_lsp"},
     automatic_installation = true,
   }
 end
