@@ -46,5 +46,25 @@ M.config = function()
 			},
 		})
 	end
+
+    lspconfig.pylsp.setup {
+      capabilities = capabilities,
+      settings = {
+        pylsp = {
+          plugins = {
+            rope_autoimport = {
+              enabled = true,
+              memory = true,
+            },
+            mypy = {
+                enabled = true,
+            },
+            pycodestyle = { enabled = false },
+            pyflakes = { enabled = false },
+            mccabe = { enabled = false },
+          },
+        },
+      },
+    }
 end
 return M
